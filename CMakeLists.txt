@@ -93,3 +93,7 @@ target_include_directories(myhello PRIVATE include)
 # cmake ..
 # make
 # ./example_person
+
+# https://blog.csdn.net/qq_38410730/article/details/102477162
+# https://www.cnblogs.com/bandaoyu/p/16752296.html
+# https://zhuanlan.zhihu.com/p/630144233
