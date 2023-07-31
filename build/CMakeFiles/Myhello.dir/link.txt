@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyhello.a  CMakeFiles/Myhello.dir/src/hello.cpp.o
+/usr/bin/ranlib libMyhello.a
