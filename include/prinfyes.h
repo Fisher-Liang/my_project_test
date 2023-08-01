@@ -7,11 +7,8 @@ public:
     Test(int x,int y){
         x_ = x;
         y_ = y;
-    }
-    void display()
-    {
-        cout<< x_ + y_ << endl;
     };
+    void display(void);
 private:
     int x_;
     int y_;

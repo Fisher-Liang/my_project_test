@@ -2,7 +2,7 @@
 #include "prinfyes.h"
 using namespace std;
 
-int main()
+void Test::display(void)
 {
     cout << "Hello C++" << endl;
     cout << "ddddd" << endl;
@@ -13,7 +13,4 @@ int main()
 
     cout << "test test test" << endl;
 
-    Test t1(2,3);
-    t1.display();
-    return 0;
 }

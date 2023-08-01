@@ -1,0 +1,1 @@
+/usr/bin/c++   -DNODEBUG -O3 -Wall -std=c++11   CMakeFiles/test.dir/src/a.cpp.o  -o test   -L/home/fisher/lfs/my_project_test/libs  -Wl,-rpath,/home/fisher/lfs/my_project_test/libs -lMyhello 
