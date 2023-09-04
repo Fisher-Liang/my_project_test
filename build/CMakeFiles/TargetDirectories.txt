@@ -1,4 +1,4 @@
 /home/fisher/lfs/my_project_test/build/CMakeFiles/rebuild_cache.dir
 /home/fisher/lfs/my_project_test/build/CMakeFiles/edit_cache.dir
-/home/fisher/lfs/my_project_test/build/CMakeFiles/test.dir
 /home/fisher/lfs/my_project_test/build/CMakeFiles/Myhello.dir
+/home/fisher/lfs/my_project_test/build/CMakeFiles/myhello.dir

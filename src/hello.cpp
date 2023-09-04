@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstdio>
 #include "prinfyes.h"
 using namespace std;
 
@@ -13,4 +14,11 @@ void Test::display(void)
 
     cout << "test test test" << endl;
 
+    cout << "类的地址（this）：" << this << endl;
+
+    cout << x_ << y_ << endl;
+}
+
+void Test::show_display_address(void){
+    
 }

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fisher/lfs/my_project_test/include/prinfyes.h
+iostream
+-
+
+/home/fisher/lfs/my_project_test/src/a.cpp
+iostream
+-
+../include/prinfyes.h
+/home/fisher/lfs/my_project_test/include/prinfyes.h
+

@@ -9,6 +9,7 @@ public:
         y_ = y;
     };
     void display(void);
+    void show_display_address(void);
 private:
     int x_;
     int y_;

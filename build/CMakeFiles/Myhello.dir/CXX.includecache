@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../include/prinfyes.h
-iostream
--
-
 /home/fisher/lfs/my_project_test/src/hello.cpp
 iostream
 -
+cstdio
+-
 prinfyes.h
 /home/fisher/lfs/my_project_test/src/prinfyes.h
+
+/home/fisher/lfs/my_project_test/src/prinfyes.h
+iostream
+-
 

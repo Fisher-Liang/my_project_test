@@ -1,2 +1,1 @@
-/usr/bin/ar qc libMyhello.a  CMakeFiles/Myhello.dir/src/hello.cpp.o
-/usr/bin/ranlib libMyhello.a
+/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++ -fPIC  -DNODEBUG -O3 -Wall -std=c++11  -shared -Wl,-soname,libMyhello.so -o ../libs/libMyhello.so CMakeFiles/Myhello.dir/src/hello.cpp.o 
