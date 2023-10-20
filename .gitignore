@@ -1,0 +1,27 @@
+# Eclipse
+.project
+.classpath
+.settings/
+
+#vscode ==========================
+.vscode/*
+
+
+# C++ ============================
+*.d
+
+# Compiled object files
+*.o
+
+# build ===========================
+CMakeFiles
+.src/*.cmake
+.src/CMakeCache.txt
+build/*
+*.cmake
+CMakeCache.txt
+Makefile
+
+
+# others
+testtesttest.txt
