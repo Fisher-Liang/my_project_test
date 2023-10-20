@@ -10,10 +10,10 @@ class H;
 
 class G{
 public:
-  // G() = default;
-  // G(shared_ptr<H>& _sph){
-  //   sph = _sph;
-  // }
+  G() = default;
+  G(shared_ptr<H>& _sph){
+    sph = _sph;
+  }
   G(const G& another){
     g = another.g;
     sph = another.sph;

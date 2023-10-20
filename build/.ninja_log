@@ -1,5 +1,0 @@
-# ninja log v5
-0	182	1691633122249659418	CMakeFiles/myhello.dir/src/a.cpp.o	1c2ef59ac108164e
-0	202	1691633122269661342	CMakeFiles/Myhello.dir/src/hello.cpp.o	96b12b3cf9def115
-202	233	1691633122301664422	../libs/libMyhello.so	24216adff9597f4d
-233	268	1691633122337667887	../releasefile/myhello	6a447fb9bd18cd37

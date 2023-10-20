@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: myhello
+# Project: Test_func_dlt
 # Configuration: Debug
 # =============================================================================
 # =============================================================================
@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Myhello
+rule CXX_COMPILER__test_func_dlt
   depfile = $DEP_FILE
   deps = gcc
   command = /home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -32,7 +32,7 @@ rule CXX_COMPILER__Myhello
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__Myhello
+rule CXX_SHARED_LIBRARY_LINKER__test_func_dlt
   command = $PRE_LINK && /home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++ -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule CXX_SHARED_LIBRARY_LINKER__Myhello
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__myhello
+rule CXX_COMPILER__Test_func_dlt
   depfile = $DEP_FILE
   deps = gcc
   command = /home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +51,7 @@ rule CXX_COMPILER__myhello
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__myhello
+rule CXX_EXECUTABLE_LINKER__Test_func_dlt
   command = $PRE_LINK && /home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT

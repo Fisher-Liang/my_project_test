@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/fisher/lfs/my_project_test/build",
-  "command": "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  -DAPP_PRINT_OUT -DMyhello_EXPORTS -I../include   -DNODEBUG -O3 -Wall -std=c++11 -g -fPIC   -o CMakeFiles/Myhello.dir/src/hello.cpp.o -c /home/fisher/lfs/my_project_test/src/hello.cpp",
-  "file": "/home/fisher/lfs/my_project_test/src/hello.cpp"
+  "command": "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  -DAPP_PRINT_OUT -Dtest_func_dlt_EXPORTS -I../include  -g -fPIC   -std=gnu++11 -o CMakeFiles/test_func_dlt.dir/src/Test.cpp.o -c /home/fisher/lfs/my_project_test/src/Test.cpp",
+  "file": "/home/fisher/lfs/my_project_test/src/Test.cpp"
 },
 
 {
   "directory": "/home/fisher/lfs/my_project_test/build",
-  "command": "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  -DAPP_PRINT_OUT -I../include   -DNODEBUG -O3 -Wall -std=c++11 -g   -o CMakeFiles/myhello.dir/src/a.cpp.o -c /home/fisher/lfs/my_project_test/src/a.cpp",
-  "file": "/home/fisher/lfs/my_project_test/src/a.cpp"
+  "command": "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1/bin/aarch64-buildroot-linux-gnu-g++  -DAPP_PRINT_OUT -I../include -I../include/dlt  -g   -std=gnu++11 -o CMakeFiles/Test_func_dlt.dir/src/test_function.cpp.o -c /home/fisher/lfs/my_project_test/src/test_function.cpp",
+  "file": "/home/fisher/lfs/my_project_test/src/test_function.cpp"
 }
 ]

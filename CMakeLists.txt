@@ -1,87 +1,87 @@
-# 设置 CMake 最低版本要求
-cmake_minimum_required(VERSION 3.8)
-# 定义项目名称和版本
-project(myhello VERSION 1.1.0 LANGUAGES CXX)
-set(CMAKE_lib_NAME Myhello)
+# # 设置 CMake 最低版本要求
+# cmake_minimum_required(VERSION 3.8)
+# # 定义项目名称和版本
+# project(myhello VERSION 1.1.0 LANGUAGES CXX)
+# set(CMAKE_lib_NAME Myhello)
 
-set(SOURCE_FILES src/hello.cpp)
-set(CMAKE_SYSTEM_NAME Linux)
-set(CMAKE_CROSSCOMPILING true)
-set(TOOLCHAIN_DIR "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1")
-set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_DIR}/aarch64-buildroot-linux-gnu/sysroot)
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM BOTH)
-set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+# set(SOURCE_FILES src/Test.cpp)
+# set(CMAKE_SYSTEM_NAME Linux)
+# set(CMAKE_CROSSCOMPILING true)
+# set(TOOLCHAIN_DIR "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1")
+# set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_DIR}/aarch64-buildroot-linux-gnu/sysroot)
+# set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM BOTH)
+# set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+# set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-# Specify the cross compiler.
-set(CMAKE_C_COMPILER    ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-gcc)
-set(CMAKE_CXX_COMPILER  ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-g++)
-message(STATUS "CMAKE_C_COMPILER: " ${CMAKE_C_COMPILER})
-message(STATUS "CMAKE_CXX_COMPILER: " ${CMAKE_CXX_COMPILER})
+# # Specify the cross compiler.
+# set(CMAKE_C_COMPILER    ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-gcc)
+# set(CMAKE_CXX_COMPILER  ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-g++)
+# message(STATUS "CMAKE_C_COMPILER: " ${CMAKE_C_COMPILER})
+# message(STATUS "CMAKE_CXX_COMPILER: " ${CMAKE_CXX_COMPILER})
 
-# 设置编译器的编译标志
-# set(CMAKE_BUILD_TYPE "Release")
+# # 设置编译器的编译标志
+# # set(CMAKE_BUILD_TYPE "Release")
 
-# According to release or debug version, set compile options.
-# if(${CMAKE_BUILD_TYPE} MATCHES "Release")
-#     message(STATUS "Release Version")
-#     set(BuildType "Release")
-#     set(CMAKE_C_FLAGS "$ENV{CFLAGS} -DNODEBUG -O3 -Wall")
-#     set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -DNODEBUG -O3 -Wall -std=c++11")
-# else()
-#     message(STATUS "Debug Version")
-#     set(BuildType "Debug")
-#     set(CMAKE_C_FLAGS "$ENV{CFLAGS} -O0 -g -Wall")
-#     set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O0 -g -Wall -std=c++11")
-#     add_definitions(-DREAD_DEBUG)
-# endif()
+# # According to release or debug version, set compile options.
+# # if(${CMAKE_BUILD_TYPE} MATCHES "Release")
+# #     message(STATUS "Release Version")
+# #     set(BuildType "Release")
+# #     set(CMAKE_C_FLAGS "$ENV{CFLAGS} -DNODEBUG -O3 -Wall")
+# #     set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -DNODEBUG -O3 -Wall -std=c++11")
+# # else()
+# #     message(STATUS "Debug Version")
+# #     set(BuildType "Debug")
+# #     set(CMAKE_C_FLAGS "$ENV{CFLAGS} -O0 -g -Wall")
+# #     set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -O0 -g -Wall -std=c++11")
+# #     add_definitions(-DREAD_DEBUG)
+# # endif()
 
-set(CMAKE_C_FLAGS "$ENV{CFLAGS} -DNODEBUG -O3 -Wall")
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -DNODEBUG -O3 -Wall -std=c++11")
+# set(CMAKE_C_FLAGS "$ENV{CFLAGS} -DNODEBUG -O3 -Wall")
+# set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -DNODEBUG -O3 -Wall -std=c++11")
 
-message(STATUS "CFLAGS: " ${CMAKE_C_FLAGS})
-message(STATUS "CXXFLAGS: " ${CMAKE_CXX_FLAGS})
+# message(STATUS "CFLAGS: " ${CMAKE_C_FLAGS})
+# message(STATUS "CXXFLAGS: " ${CMAKE_CXX_FLAGS})
 
-# # 设置输出路径
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/releasefile/)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/libs/)
+# # # 设置输出路径
+# set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/releasefile/)
+# set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/libs/)
 
-#========================================================================#
-#===================          SO lib       ==============================#
-#========================================================================#
-add_library(${CMAKE_lib_NAME} SHARED
-    src/hello.cpp
-)
-
-# target_link_libraries(${CMAKE_lib_NAME}
-#     ${CMAKE_CURRENT_SOURCE_DIR}/libs/libMyhello.so
+# #========================================================================#
+# #===================          SO lib       ==============================#
+# #========================================================================#
+# add_library(${CMAKE_lib_NAME} SHARED
+#     src/Test.cpp
 # )
 
-target_include_directories(${CMAKE_lib_NAME} 
-    PRIVATE
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-)
-#========================================================================#
-#===================          APP bin      ==============================#
-#========================================================================#
+# # target_link_libraries(${CMAKE_lib_NAME}
+# #     ${CMAKE_CURRENT_SOURCE_DIR}/libs/libMyhello.so
+# # )
+
+# target_include_directories(${CMAKE_lib_NAME} 
+#     PRIVATE
+#         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+# )
+# #========================================================================#
+# #===================          APP bin      ==============================#
+# #========================================================================#
 
 
-add_definitions(-DAPP_PRINT_OUT)
+# add_definitions(-DAPP_PRINT_OUT)
 
 
-add_executable(${PROJECT_NAME}
-    src/a.cpp
-)
+# add_executable(${PROJECT_NAME}
+#     src/myhello.cpp
+# )
 
-target_link_libraries(${PROJECT_NAME} 
-${CMAKE_CURRENT_SOURCE_DIR}/libs/libMyhello.so
-)
+# target_link_libraries(${PROJECT_NAME} 
+# ${CMAKE_CURRENT_SOURCE_DIR}/libs/libMyhello.so
+# )
 
-target_include_directories(${PROJECT_NAME} 
-    PRIVATE
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-)
-message("CMAKE_CURRENT_SOURCE_DIR====",${CMAKE_CURRENT_SOURCE_DIR})
+# target_include_directories(${PROJECT_NAME} 
+#     PRIVATE
+#         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+# )
+# message("CMAKE_CURRENT_SOURCE_DIR====",${CMAKE_CURRENT_SOURCE_DIR})
 #========================================================================#
 
 
@@ -105,3 +105,71 @@ message("CMAKE_CURRENT_SOURCE_DIR====",${CMAKE_CURRENT_SOURCE_DIR})
 #     PRIVATE
 #         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 # )
+
+cmake_minimum_required(VERSION 3.0)
+project(Test_func_dlt)
+set(CMAKE_lib_NAME test_func_dlt)
+
+# set(SOURCE_FILES src/Test.cpp)
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_CROSSCOMPILING true)
+set(TOOLCHAIN_DIR "/home/fisher/igs/DriveOS/toolchains/aarch64--glibc--stable-2020.08-1")
+set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_DIR}/aarch64-buildroot-linux-gnu/sysroot)
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM BOTH)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+# # Specify the cross compiler.
+set(CMAKE_C_COMPILER    ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER  ${TOOLCHAIN_DIR}/bin/aarch64-buildroot-linux-gnu-g++)
+message(STATUS "CMAKE_C_COMPILER: " ${CMAKE_C_COMPILER})
+message(STATUS "CMAKE_CXX_COMPILER: " ${CMAKE_CXX_COMPILER})
+
+
+# 指定编译器
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/releasefile/)
+# set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/releasefile/)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/libs/)
+
+# #========================================================================#
+# #===================          SO lib       ==============================#
+# #========================================================================#
+add_library(${CMAKE_lib_NAME} SHARED
+    src/Test.cpp
+)
+
+# # target_link_libraries(${CMAKE_lib_NAME}
+# #     ${CMAKE_CURRENT_SOURCE_DIR}/libs/libMyhello.so
+# # )
+
+target_include_directories(${CMAKE_lib_NAME} 
+    PRIVATE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
+
+# #========================================================================#
+# #===================          APP bin      ==============================#
+# #========================================================================#
+
+
+add_definitions(-DAPP_PRINT_OUT)
+
+add_executable(${PROJECT_NAME}
+    src/test_function.cpp
+)
+
+
+target_link_libraries(${PROJECT_NAME} 
+    ${CMAKE_CURRENT_SOURCE_DIR}/libs/libtest_func_dlt.so
+    ${CMAKE_CURRENT_SOURCE_DIR}/libs/dlt/libdlt.so
+)
+
+target_include_directories(${PROJECT_NAME} 
+    PRIVATE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/dlt>
+)
+message("CMAKE_CURRENT_SOURCE_DIR====",${CMAKE_CURRENT_SOURCE_DIR})

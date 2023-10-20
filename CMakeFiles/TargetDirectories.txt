@@ -1,0 +1,4 @@
+/home/fisher/lfs/my_project_test/CMakeFiles/rebuild_cache.dir
+/home/fisher/lfs/my_project_test/CMakeFiles/edit_cache.dir
+/home/fisher/lfs/my_project_test/CMakeFiles/test_func_dlt.dir
+/home/fisher/lfs/my_project_test/CMakeFiles/Test_func_dlt.dir

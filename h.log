@@ -1,0 +1,109 @@
+    1  sudo systemctl status MpdFotaApp.service 
+    2  !
+    3  q!
+    4  sudo systemctl stop MpdFotaApp.service 
+    5  sudo /ap/bin/adg.sh --state
+    6  ps -ef|grep comd
+    7  cd /app/ap/studio/
+    8  ls
+    9  mv MpdFotaApp old_MpdFotaApp
+   10  sudo mv MpdFotaApp old_MpdFotaApp
+   11  ls
+   12  sudo tcpdump -i mgbe3_0.3 -w /fota/fota.pcap &
+   13  ls
+   14  sudo mount /dev/sda1 /mnt/
+   15  cd /mnt/
+   16  ls
+   17  tar -zxvf ep35_mpd_fota+6.tar.gz 
+   18  ls -l
+   19  mkdir temp
+   20  chown  -R pp-cem:pp-cem /mnt/
+   21  sudo chown  -R pp-cem:pp-cem /mnt/
+   22  ls
+   23  sudo mv ep35_mpd_fota+6.tar.gz /app/ap/studio/
+   24  sudo chown -R pp-cem:pp-cem /app/ap/studio/
+   25  cd /app/ap/studio/
+   26  mkdir temp
+   27  mv ep35_mpd_fota+6.tar.gz temp/
+   28  ls
+   29  cd temp/
+   30  ls
+   31  tar -zxvf ep35_mpd_fota+6.tar.gz 
+   32  ls
+   33  cd ep35_mpd_fota/
+   34  ls
+   35  cd ../
+   36  ls
+   37  cd ../
+   38  ls
+   39  cd temp/
+   40  mv ep35_mpd_fota MpdFotaApp
+   41  ls
+   42  mv MpdFotaApp ../
+   43  ls
+   44  cd ../
+   45  ls
+   46  cd old_MpdFotaApp/
+   47  ls
+   48  cd lib/
+   49  ls
+   50  cd ../
+   51  cd /mnt/
+   52  ls
+   53  cp fota_lib.tar.gz  /app/ap/studio/temp/
+   54  cd /app/ap/studio/temp/
+   55  ls
+   56  tar -zxvf fota_lib.tar.gz 
+   57  ls
+   58  cd es33_mpd_fota/
+   59  ls
+   60  cd impl/
+   61  ls
+   62  cd lib/
+   63  ls
+   64  cd ../
+   65  ls
+   66  cd ../
+   67  ls
+   68  cd ../
+   69  ls
+   70  cp -r old_MpdFotaApp/usr/lib MpdFotaApp/usr/
+   71  cd MpdFotaApp/usr/
+   72  ls
+   73  cd lib/
+   74  ls
+   75  ls -l
+   76  cd ../
+   77  ls
+   78  cd aa_startup/
+   79  ls
+   80  sudo ./MpdFotaApp.sh
+   81  sudo systemctl start MpdFotaApp.service 
+   82  systemctl status MpdFotaApp.service 
+   83  !
+   84  systemctl status dlt-daemon.service 
+   85  cat /app/image_version 
+   86  systemctl status dlt-daemon.service 
+   87  tail -f /log/dlt/MpdFotaApp_001_20230627-123501.dlt 
+   88  sudo systemctl stop
+   89  sudo systemctl stop MpdFotaApp.service 
+   90  cd ../
+   91  cp /mnt/es33_mpd_fota_CM_MPD_MPU_EthECUInterface_MPD_MPU.json ./
+   92  ls
+   93  sudo mv /ap_conf/etc/adaptive/ara_Com/daemon_1/mgbe3_0.3/MpdFotaApp_CM_MPD_MPU_EthECUInterface_MPD_MPU.json  /fota/
+   94  vi /fota/MpdFotaApp_CM_MPD_MPU_EthECUInterface_MPD_MPU.json 
+   95  ls
+   96  vi es33_mpd_fota_CM_MPD_MPU_EthECUInterface_MPD_MPU.json 
+   97  sync
+   98  sudo mv es33_mpd_fota_CM_MPD_MPU_EthECUInterface_MPD_MPU.json /ap_conf/etc/adaptive/ara_Com/daemon_1/mgbe3_0.3/
+   99  sync
+  100  sudo /ap/bin/adg.sh --stop
+  101  sudo /ap/bin/adg.sh --start
+  102  sudo /ap/bin/adg.sh --state
+  103  ps -ef|grep comd
+  104  ps -ef|grep tcpdump
+  105  sudo systemctl stop cem_driver_*
+  106  sudo systemctl status MpdFotaApp.service 
+  107  tail -f /log/dlt/MpdFotaApp_001_20230627-123501.dlt 
+  108  history
+  109  history > h.log

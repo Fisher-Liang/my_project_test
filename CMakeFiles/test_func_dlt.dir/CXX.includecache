@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fisher/lfs/my_project_test/src/Test.cpp
+iostream
+-
+cstdio
+-
+Test.h
+/home/fisher/lfs/my_project_test/src/Test.h
+
+include/Test.h
+iostream
+-
+

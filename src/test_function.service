@@ -1,0 +1,10 @@
+[Unit]
+Description=test_function-1.0
+
+[Service]
+Type=simple
+ExecStart=/home/fisher/lfs/my_project_test/src/test_func_startup.sh
+
+
+[Install]
+WantedBy=multi-user.target
